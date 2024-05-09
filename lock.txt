@@ -1,0 +1,20 @@
+The flock() function is used in Unix-like operating systems, including Linux, to control access to files.
+It allows processes to lock files to prevent other processes from accessing them in conflicting ways. 
+In the flock() function, several flags can be used to specify different locking behaviors. Here are the flags and their meanings:
+
+    LOCK_SH:
+        Acquires a shared lock on the file. 
+        Multiple processes can hold shared locks simultaneously, allowing concurrent read access to the file.
+
+    LOCK_EX:
+        Acquires an exclusive lock on the file. 
+        Only one process can hold an exclusive lock at a time, preventing other processes from acquiring any type of lock on the file.
+        This is used for write access to the file.
+
+    LOCK_UN:
+        Releases a previously acquired lock on the file. This flag is used to unlock the file, allowing other processes to access it.
+
+    LOCK_NB:
+        Specifies non-blocking mode for lock acquisition. 
+        When combined with LOCK_SH or LOCK_EX, the function will attempt to acquire the lock without blocking the calling process. 
+        If the lock cannot be acquired immediately, the function will return with a failure indication instead of waiting for the lock to become available.

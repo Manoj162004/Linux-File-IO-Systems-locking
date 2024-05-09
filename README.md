@@ -94,5 +94,5 @@ return 0;
 
 ![lslocksoutput](lslocks.png)
 
-##g RESULT:
+## RESULT:
 The programs are executed successfully.
